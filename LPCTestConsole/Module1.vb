@@ -18,7 +18,7 @@
             Console.WriteLine("It's a test command. Nothing to see.")
             'Console.Read()
         ElseIf command = "ver" Then
-            Console.WriteLine("Version 1.1.rel (c) 2019 LPC")
+            Console.WriteLine("Version 1.1.0.1909 (c) 2019 LeoCorp")
             'Console.Read()
         ElseIf command = "help" Then
             Console.WriteLine("--------------HELP--------------")
