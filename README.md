@@ -12,4 +12,5 @@ Ce programme inclus plusieurs commandes comme :
 * home
 * test
 
-Pour plus d'infos, rendez-vous dans la [documentation](https://github.com/Leo-Corporation/LABS-ExperimentalConsole/wiki).
+* Pour plus d'infos, rendez-vous dans la [documentation](https://github.com/Leo-Corporation/LABS-ExperimentalConsole/wiki).
+* Pour obtenir des informations sur les commandes cliquez [ici](https://github.com/Leo-Corporation/LABS-ExperimentalConsole/wiki/Commandes).
