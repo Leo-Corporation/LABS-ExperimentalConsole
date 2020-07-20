@@ -4,6 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>LABS_Experimental_Console</RootNamespace>
+    <ApplicationIcon>Logo.ico</ApplicationIcon>
   </PropertyGroup>
 
 </Project>
