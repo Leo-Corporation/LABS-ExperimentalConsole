@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Net;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace LABS_Experimental_Console.Classes
@@ -39,7 +41,7 @@ namespace LABS_Experimental_Console.Classes
         public static bool IsUpdateAvailable()
         {
             bool res = false; // Résultat
-            if (Definitions.Version == new WebClient().DownloadString(""))
+            if (Definitions.Version != new WebClient().DownloadString("https://raw.githubusercontent.com/Leo-Corporation/LeoCorp-Docs/e22934778165a2808115c26656c545e33f4c7688/Liens/Update%20System/LABS%20Experimental%20Console/version.txt"))
             {
                 res = true;   
             }
@@ -48,6 +50,26 @@ namespace LABS_Experimental_Console.Classes
                 res = false;
             }
             return res;
+        }
+
+        public static bool OpenBrowser(string url)
+        {
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            {
+                Process.Start(new ProcessStartInfo("cmd", $"/c start {url.Replace("&", "^&")}") { CreateNoWindow = true });
+                return true;
+            }
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+            {
+                Process.Start("xdg-open", url);
+                return true;
+            }
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+            {
+                Process.Start("open", url);
+                return true;
+            }
+            return false;
         }
     }
 }
