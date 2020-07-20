@@ -1,5 +1,6 @@
 ﻿using LABS_Experimental_Console.Classes;
 using System;
+using System.Diagnostics;
 using System.Linq;
 
 namespace LABS_Experimental_Console
@@ -48,8 +49,31 @@ namespace LABS_Experimental_Console
                         GoHome();
                         break;
                     case "update":
-
-                        GoHome();
+                        if (!Functions.IsUpdateAvailable())
+                        {
+                            Console.ForegroundColor = ConsoleColor.Blue;
+                            Console.WriteLine(""); // Ecrire
+                            Console.WriteLine("Des mises à jour sont disponibles, voulez-vous les installer ?"); // Ecrire
+                            Console.WriteLine(" ___________         ___________"); // Ecrire
+                            Console.WriteLine("|  Oui (y)  |       |  Non (n)  |"); // Ecrire
+                            Console.WriteLine(" ¯¯¯¯¯¯¯¯¯¯¯         ¯¯¯¯¯¯¯¯¯¯¯"); // Ecrire
+                            Console.ResetColor(); // Mettre la couleur par défaut
+                            if (Console.ReadLine() == "y")
+                            {
+                                Functions.OpenBrowser("https://github.com/Leo-Corporation/LABS-ExperimentalConsole/releases"); // Ouvrir la page web
+                                GoHome();
+                            }
+                            else
+                            {
+                                GoHome();
+                            }
+                        }
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.Blue;
+                            Console.WriteLine("Aucunes mises à jour disponibles."); // Ecrire
+                            GoHome();
+                        }
                         break;
                 }
             }
