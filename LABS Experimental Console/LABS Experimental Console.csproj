@@ -5,6 +5,12 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>LABS_Experimental_Console</RootNamespace>
     <ApplicationIcon>Logo.ico</ApplicationIcon>
+    <AssemblyVersion>1.0.0.2007</AssemblyVersion>
+    <FileVersion>1.0.0.2007</FileVersion>
+    <Company>Léo Corporation</Company>
+    <Authors>Léo Corporation</Authors>
+    <Copyright>2020</Copyright>
+    <RepositoryUrl>https://github.com/Leo-Corporation/LABS-ExperimentalConsole</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
