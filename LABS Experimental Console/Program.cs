@@ -9,6 +9,7 @@ namespace LABS_Experimental_Console
     {
         static void Main(string[] args)
         {
+            Console.Title = "LABS Experimental Console v" + Definitions.Version; // Mettre le titre
             new Program().GoHome();
         }
 
