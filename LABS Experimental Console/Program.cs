@@ -49,7 +49,7 @@ namespace LABS_Experimental_Console
                         GoHome();
                         break;
                     case "update":
-                        if (!Functions.IsUpdateAvailable())
+                        if (Functions.IsUpdateAvailable())
                         {
                             Console.ForegroundColor = ConsoleColor.Blue;
                             Console.WriteLine(""); // Ecrire
