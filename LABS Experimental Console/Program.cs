@@ -11,7 +11,7 @@ namespace LABS_Experimental_Console
         {
             Console.Title = "LABS Experimental Console v" + Definitions.Version; // Mettre le titre
             Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
-            Console.WriteLine("LABS Exeprimental Console v{0}", Definitions.Version); // Ecrire
+            Console.WriteLine("LABS Experimental Console v{0}", Definitions.Version); // Ecrire
             new Program().GoHome();
         }
 
