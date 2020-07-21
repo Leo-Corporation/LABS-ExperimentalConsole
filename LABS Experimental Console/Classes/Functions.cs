@@ -21,6 +21,7 @@ namespace LABS_Experimental_Console.Classes
             Console.WriteLine("clear : Efface la console"); // Ecrire
             Console.WriteLine("exit : Ferme la console"); // Ecrire
             Console.WriteLine("help : Affiche l'aide"); // Ecrire
+            Console.WriteLine("list : Affiche les commandes"); // Ecrire
             Console.WriteLine("update : Vérifie si des mises à jour sont disponibles"); // Ecrire
             Console.WriteLine("ver : Affiche la version"); // Ecrire
         }
