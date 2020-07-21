@@ -102,7 +102,7 @@ namespace LABS_Experimental_Console
         public bool IsCommandExist(string command)
         {
             bool res = true; // Résultat
-            if (Definitions.Commands.Contains(command))
+            if (Definitions.Commands.Contains(command.ToLower()))
             {
                 res = true;
             }
