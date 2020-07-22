@@ -24,6 +24,7 @@ namespace LABS_Experimental_Console.Classes
             Console.WriteLine("help : Affiche l'aide"); // Ecrire
             Console.WriteLine("list : Affiche les commandes"); // Ecrire
             Console.WriteLine("logo : Affiche le logo"); // Ecrire
+            Console.WriteLine("repo : Ouvre le dépôt GitHub"); // Ecrire
             Console.WriteLine("update : Vérifie si des mises à jour sont disponibles"); // Ecrire
             Console.WriteLine("ver : Affiche la version"); // Ecrire
         }

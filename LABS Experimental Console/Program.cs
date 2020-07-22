@@ -96,6 +96,12 @@ namespace LABS_Experimental_Console
                         Functions.PrintLogo();
                         GoHome();
                         break;
+                    case "repo":
+                        Functions.OpenBrowser("https://github.com/Leo-Corporation/LABS-ExperimentalConsole/"); // Ouvrir le dépôt
+                        Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
+                        Console.WriteLine("Le dépôt GitHub a été affiché dans un navigateur."); // Ecrire
+                        GoHome();
+                        break;
                 }
             }
         }
