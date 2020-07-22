@@ -23,6 +23,7 @@ namespace LABS_Experimental_Console.Classes
             Console.WriteLine("exit : Ferme la console"); // Ecrire
             Console.WriteLine("help : Affiche l'aide"); // Ecrire
             Console.WriteLine("list : Affiche les commandes"); // Ecrire
+            Console.WriteLine("logo : Affiche le logo"); // Ecrire
             Console.WriteLine("update : Vérifie si des mises à jour sont disponibles"); // Ecrire
             Console.WriteLine("ver : Affiche la version"); // Ecrire
         }
@@ -38,6 +39,18 @@ namespace LABS_Experimental_Console.Classes
             {
                 Console.WriteLine(Definitions.Commands[i]); // Ecrire
             }
+        }
+
+        public static void PrintLogo()
+        {
+            Console.WriteLine(@"       _______  ");
+            Console.WriteLine(@"       \     /  ");
+            Console.WriteLine(@"        |   |   ");
+            Console.WriteLine(@"       /    \   ");
+            Console.WriteLine(@"      /      \  ");
+            Console.WriteLine(@"     /        \ ");
+            Console.WriteLine(@"    /          \");
+            Console.WriteLine(@"    \__________/");
         }
 
         public static bool IsUpdateAvailable()

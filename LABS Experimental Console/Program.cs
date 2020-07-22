@@ -91,6 +91,11 @@ namespace LABS_Experimental_Console
                         Console.WriteLine("Beep !"); // Ecrire
                         GoHome();
                         break;
+                    case "logo":
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Functions.PrintLogo();
+                        GoHome();
+                        break;
                 }
             }
         }
