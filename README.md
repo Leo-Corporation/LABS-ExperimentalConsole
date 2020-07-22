@@ -10,6 +10,7 @@ Ce programme inclus plusieurs commandes comme :
 * cls
 * about
 * list
+* update
 
 ## Autres informations
 Pour plus d'infos, rendez-vous dans la [documentation](https://github.com/Leo-Corporation/LABS-ExperimentalConsole/wiki).
