@@ -60,6 +60,8 @@ namespace LABS_Experimental_Console
                             Console.WriteLine(" ___________         ___________"); // Ecrire
                             Console.WriteLine("|  Oui (y)  |       |  Non (n)  |"); // Ecrire
                             Console.WriteLine(" ¯¯¯¯¯¯¯¯¯¯¯         ¯¯¯¯¯¯¯¯¯¯¯"); // Ecrire
+                            Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
+                            Console.Write(">>> "); // Ecrire
                             Console.ResetColor(); // Mettre la couleur par défaut
                             if (Console.ReadLine() == "y")
                             {
@@ -98,6 +100,8 @@ namespace LABS_Experimental_Console
             Console.ForegroundColor = ConsoleColor.Yellow; // Changer la couleur
             Console.WriteLine(""); // Ecrire
             Console.WriteLine("Pour commencer, tapez une commande. Tapez 'help' pour afficher l'aide."); // Ecrire
+            Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
+            Console.Write(">>> "); // Ecrire
             Console.ResetColor(); // Mettre la couleur par défaut
             ExecuteCommand(Console.ReadLine());
         }
