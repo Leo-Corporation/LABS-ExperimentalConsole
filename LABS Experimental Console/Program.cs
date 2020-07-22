@@ -78,6 +78,17 @@ namespace LABS_Experimental_Console
                             GoHome();
                         }
                         break;
+                    case "beep":
+                        Console.Beep(1500, 300); // Beep
+                        Console.WriteLine("Beep !"); // Ecrire
+                        System.Threading.Thread.Sleep(300);
+                        Console.Beep(1500, 300); // Beep
+                        Console.WriteLine("Beep !"); // Ecrire
+                        System.Threading.Thread.Sleep(100);
+                        Console.Beep(1500, 300); // Beep
+                        Console.WriteLine("Beep !"); // Ecrire
+                        GoHome();
+                        break;
                 }
             }
         }
