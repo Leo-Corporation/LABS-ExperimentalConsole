@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -20,6 +20,6 @@ jobs:
     - name: Install dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build "LABS-ExperimentalConsole\LABS Experimental Console\LABS Experimental Console.csproj" --configuration Release --no-restore
+      run: dotnet build "LABS Experimental Console\LABS Experimental Console.csproj" --configuration Release --no-restore
     - name: Test
-      run: dotnet test "LABS-ExperimentalConsole\LABS Experimental Console\LABS Experimental Console.csproj" --no-restore --verbosity normal
+      run: dotnet test "LABS Experimental Console\LABS Experimental Console.csproj" --no-restore --verbosity normal
