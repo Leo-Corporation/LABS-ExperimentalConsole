@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
+using System.Linq;
 using System.Net;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -26,6 +27,7 @@ namespace LABS_Experimental_Console.Classes
             Console.WriteLine("logo : Affiche le logo"); // Ecrire
             Console.WriteLine("repo : Ouvre le dépôt GitHub"); // Ecrire
             Console.WriteLine("update : Vérifie si des mises à jour sont disponibles"); // Ecrire
+            Console.WriteLine("usage : Affiche commant utiliser les commandes"); // Ecrire
             Console.WriteLine("ver : Affiche la version"); // Ecrire
         }
 
@@ -86,6 +88,50 @@ namespace LABS_Experimental_Console.Classes
                 return true;
             }
             return false;
+        }
+
+        public static void PrintUsage(string command)
+        {
+            Console.ResetColor(); // Réintialiser
+            switch (command)
+            {
+                case "help":
+                    Console.WriteLine("Utilisation de 'help' : help"); // Ecrire
+                    break;
+                case "ver":
+                    Console.WriteLine("Utilisation de 'ver' : ver"); // Ecrire
+                    break;
+                case "update":
+                    Console.WriteLine("Utilisation de 'update' : update"); // Ecrire
+                    break;
+                case "list":
+                    Console.WriteLine("Utilisation de 'list' : list"); // Ecrire
+                    break;
+                case "exit":
+                    Console.WriteLine("Utilisation de 'exit' : exit"); // Ecrire
+                    break;
+                case "about":
+                    Console.WriteLine("Utilisation de 'about' : about"); // Ecrire
+                    break;
+                case "clear":
+                    Console.WriteLine("Utilisation de 'clear' : clear"); // Ecrire
+                    break;
+                case "cls":
+                    Console.WriteLine("Utilisation de 'cls' : cls"); // Ecrire
+                    break;
+                case "beep":
+                    Console.WriteLine("Utilisation de 'beep' : beep"); // Ecrire
+                    break;
+                case "logo":
+                    Console.WriteLine("Utilisation de 'logo' : logo"); // Ecrire
+                    break;
+                case "repo":
+                    Console.WriteLine("Utilisation de 'repo' : repo"); // Ecrire
+                    break;
+                case "usage":
+                    Console.WriteLine("Utilisation de 'usage' : usage"); // Ecrire
+                    break;
+            }
         }
     }
 }
