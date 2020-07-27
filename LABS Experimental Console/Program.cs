@@ -36,7 +36,7 @@ namespace LABS_Experimental_Console
                         break;
                     case "about": // Si la commande est "help"
                         Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
-                        Console.WriteLine("LABS Experimental Console © {0} Léo Corporation", DateTime.Now.Year) ; // Ecrire
+                        Console.WriteLine("LABS Experimental Console © {0} Léo Corporation", DateTime.Now.Year); // Ecrire
                         GoHome();
                         break;
                     case "cls":
@@ -100,6 +100,17 @@ namespace LABS_Experimental_Console
                         Functions.OpenBrowser("https://github.com/Leo-Corporation/LABS-ExperimentalConsole/"); // Ouvrir le dépôt
                         Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
                         Console.WriteLine("Le dépôt GitHub a été affiché dans un navigateur."); // Ecrire
+                        GoHome();
+                        break;
+                    case "usage":
+                        Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
+                        Console.WriteLine("+----+ Utilisation +----+"); // Ecrire
+                        Console.WriteLine(""); // Ecrire
+                        for (int i = 0; i < Definitions.Commands.Length; i++)
+                        {
+                            Functions.PrintUsage(Definitions.Commands[i]); // Imprimer l'utilisation des commandes
+                        }
+                        
                         GoHome();
                         break;
                 }
