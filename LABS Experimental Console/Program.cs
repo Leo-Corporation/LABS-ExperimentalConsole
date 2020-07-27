@@ -121,7 +121,8 @@ namespace LABS_Experimental_Console
         {
             Console.ForegroundColor = ConsoleColor.Red; // Mettre en rouge
             Console.WriteLine("La commande que vous avez executée n'existe pas."); // Afficher le message
-            Console.Beep(1000, 1000); // Beep
+            Console.Beep(1000, 100); // Beep
+            Console.Beep(1000, 100); // Beep
             Console.ResetColor(); // Mettre la couleur par défaut
             GoHome();
         }
