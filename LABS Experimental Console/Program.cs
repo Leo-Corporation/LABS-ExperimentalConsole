@@ -36,7 +36,7 @@ namespace LABS_Experimental_Console
                         break;
                     case "about": // Si la commande est "help"
                         Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
-                        Console.WriteLine("LABS Experimental Console © {0} Léo Corporation", DateTime.Now.Year); // Ecrire
+                        Console.WriteLine("LABS Experimental Console © {0} - Léo Corporation", DateTime.Now.Year); // Ecrire
                         GoHome();
                         break;
                     case "cls":
