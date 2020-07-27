@@ -19,7 +19,7 @@ namespace LABS_Experimental_Console.Classes
             Console.WriteLine(""); // Ecrire
             Console.WriteLine("about : Affiche les crédits"); // Ecrire
             Console.WriteLine("beep : Beep"); // Ecrire
-            Console.WriteLine("clear : Efface la console"); // Ecrire
+            Console.WriteLine("clear, cls : Efface la console"); // Ecrire
             Console.WriteLine("exit : Ferme la console"); // Ecrire
             Console.WriteLine("help : Affiche l'aide"); // Ecrire
             Console.WriteLine("list : Affiche les commandes"); // Ecrire
