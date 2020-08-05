@@ -30,6 +30,9 @@ namespace LABS_Experimental_Console
 {
     class Program
     {
+        int result = 0; // Résultat
+        int[] numbers = new int[10000]; // Nombres
+        int counter = 0;
         static void Main(string[] args)
         {
             Console.Title = "LABS Experimental Console v" + Definitions.Version; // Mettre le titre
@@ -136,7 +139,47 @@ namespace LABS_Experimental_Console
                         
                         GoHome();
                         break;
+                    case "sum":
+                        result = 0;
+                        counter = 0;
+                        numbers = new int[10000];
+                        Sum();
+                        break;
                 }
+            }
+        }
+        void Sum()
+        {
+            Console.WriteLine("Entrez un nombre"); // Ecrire
+            Console.WriteLine(""); // Ecrire
+            Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
+            Console.Write(">>> "); // Ecrire
+            Console.ResetColor(); // Mettre la couleur par défaut
+            int number = int.Parse(Console.ReadLine());
+            numbers[counter] = number;
+            counter++;
+            Console.WriteLine("Voulez-vous ajouter un autre nombre ? (y/n)"); // Ecrire
+            Console.WriteLine(""); // Ecrire
+            Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
+            Console.Write(">>> "); // Ecrire
+            Console.ResetColor(); // Mettre la couleur par défaut
+            if (Console.ReadLine() == "y")
+            {
+                Sum();
+            }
+            else
+            {
+                GetResult(numbers); // Obtenir le résultat
+                Console.WriteLine($"Résultat : {result}");
+                GoHome();
+            }
+        }
+
+        void GetResult(int[] numbers)
+        {
+            foreach (int number in numbers)
+            {
+                result += number;
             }
         }
 
