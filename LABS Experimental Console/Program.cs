@@ -25,6 +25,7 @@ using LABS_Experimental_Console.Classes;
 using System;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace LABS_Experimental_Console
 {
@@ -198,10 +199,20 @@ namespace LABS_Experimental_Console
         {
             Console.ForegroundColor = ConsoleColor.Red; // Mettre en rouge
             Console.WriteLine("La commande que vous avez executée n'existe pas."); // Afficher le message
-            Console.Beep(1000, 100); // Beep
-            Console.Beep(1000, 100); // Beep
+            BeepAsync(1000, 100, 2);
             Console.ResetColor(); // Mettre la couleur par défaut
             GoHome();
+        }
+
+        public void BeepAsync(int frequency, int duration, int repeat)
+        {
+            Task.Run(() =>
+            {
+                for (int i = 0; i < repeat; i++)
+                {
+                    Console.Beep(frequency, duration); // Beep
+                }
+            });
         }
 
         public bool IsCommandExist(string command)
