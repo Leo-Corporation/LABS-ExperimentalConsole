@@ -154,6 +154,9 @@ namespace LABS_Experimental_Console.Classes
                 case "usage":
                     Console.WriteLine("Utilisation de 'usage' : usage"); // Ecrire
                     break;
+                case "sum":
+                    Console.WriteLine("Utilisation de 'sum' : sum"); // Ecrire
+                    break;
             }
         }
     }
