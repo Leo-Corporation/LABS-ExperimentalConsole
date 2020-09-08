@@ -29,7 +29,7 @@ namespace LABS_Experimental_Console.Classes
 {
     public static class Definitions
     {
-        public static readonly string Version = "1.3.0.2008"; // Version de la console
+        public static readonly string Version = "1.4.0.2009"; // Version de la console
         public static readonly string[] Commands = { "help", "ver", "update", "list", "exit", "about", "clear", "cls", "beep", "logo", "repo", "usage", "sum" }; // Commandes
     }
 }
