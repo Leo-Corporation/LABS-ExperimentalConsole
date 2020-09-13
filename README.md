@@ -19,6 +19,6 @@ LABS Experimental Console has the following commands:
 
 ## Miscellaneous informations
 Go to the [documentation](https://github.com/Leo-Corporation/LABS-ExperimentalConsole/wiki) for more informations.
-Click [here](https://github.com/Leo-Corporation/LABS-ExperimentalConsole/wiki/Commandes) to get more informations on the commands and their usage.
+Click [here](https://github.com/Leo-Corporation/LABS-ExperimentalConsole/wiki/Commands) to get more informations on the commands and their usage.
 ## License
 Project under the [MIT License](https://github.com/Leo-Corporation/LABS-ExperimentalConsole/blob/master/LICENSE.md).
