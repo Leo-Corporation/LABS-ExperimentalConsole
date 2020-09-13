@@ -1,9 +1,9 @@
 # LABS Experimental Console ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Leo-Corporation/LABS-ExperimentalConsole/.NET%20Core) ![GitHub](https://img.shields.io/github/license/Leo-Corporation/LABS-ExperimentalConsole)
 ## Introduction
-LABS ExperimentalConsole est une application console dédiée à des tests.
-Le programme a été réécrit en C#, et en .NET Core 3.1.
+LABS ExperimentalConsole is a console application that is dedicated to test on C#, .NET, and more.
+It has been rewritten in C# and in .NET Core 3.1.
 ## Commandes
-Ce programme inclus plusieurs commandes comme :
+LABS Experimental Console has the following commands:
 * ver
 * help
 * clear
@@ -17,8 +17,8 @@ Ce programme inclus plusieurs commandes comme :
 * beep
 * sum
 
-## Autres informations
-Pour plus d'infos, rendez-vous dans la [documentation](https://github.com/Leo-Corporation/LABS-ExperimentalConsole/wiki).
-Pour obtenir des informations sur les commandes cliquez [ici](https://github.com/Leo-Corporation/LABS-ExperimentalConsole/wiki/Commandes).
+## Miscellaneous informations
+Go to the [documentation](https://github.com/Leo-Corporation/LABS-ExperimentalConsole/wiki) for more informations.
+Click [here](https://github.com/Leo-Corporation/LABS-ExperimentalConsole/wiki/Commandes) to get more informations on the commands and their usage.
 ## License
-Projet sous [license MIT](https://github.com/Leo-Corporation/LABS-ExperimentalConsole/blob/master/LICENSE.md).
+Project under the [MIT License](https://github.com/Leo-Corporation/LABS-ExperimentalConsole/blob/master/LICENSE.md).
