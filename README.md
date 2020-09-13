@@ -2,7 +2,7 @@
 ## Introduction
 LABS ExperimentalConsole is a console application that is dedicated to test on C#, .NET, and more.
 It has been rewritten in C# and in .NET Core 3.1.
-## Commandes
+## Commands
 LABS Experimental Console has the following commands:
 * ver
 * help
