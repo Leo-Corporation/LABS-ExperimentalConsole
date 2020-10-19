@@ -83,10 +83,10 @@ namespace LABS_Experimental_Console
                         {
                             Console.ForegroundColor = ConsoleColor.Blue;
                             Console.WriteLine(""); // Ecrire
-                            Console.WriteLine("Des mises à jour sont disponibles, voulez-vous les installer ?"); // Ecrire
-                            Console.WriteLine(" ___________         ___________"); // Ecrire
-                            Console.WriteLine("|  Oui (y)  |       |  Non (n)  |"); // Ecrire
-                            Console.WriteLine(" ¯¯¯¯¯¯¯¯¯¯¯         ¯¯¯¯¯¯¯¯¯¯¯"); // Ecrire
+                            Console.WriteLine("Updates are avialable, do you wanna install them?"); // Ecrire
+                            Console.WriteLine(" ___________         __________"); // Ecrire
+                            Console.WriteLine("|  Yes (y)  |       |  No (n)  |"); // Ecrire
+                            Console.WriteLine(" ¯¯¯¯¯¯¯¯¯¯¯         ¯¯¯¯¯¯¯¯¯¯"); // Ecrire
                             Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
                             Console.Write(">>> "); // Ecrire
                             Console.ResetColor(); // Mettre la couleur par défaut
@@ -103,7 +103,7 @@ namespace LABS_Experimental_Console
                         else
                         {
                             Console.ForegroundColor = ConsoleColor.Blue;
-                            Console.WriteLine("Aucunes mises à jour disponibles."); // Ecrire
+                            Console.WriteLine("No updates are available."); // Ecrire
                             GoHome();
                         }
                         break;
@@ -126,12 +126,12 @@ namespace LABS_Experimental_Console
                     case "repo":
                         Functions.OpenBrowser("https://github.com/Leo-Corporation/LABS-ExperimentalConsole/"); // Ouvrir le dépôt
                         Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
-                        Console.WriteLine("Le dépôt GitHub a été affiché dans un navigateur."); // Ecrire
+                        Console.WriteLine("The GitHub repo has been shown in your default browser."); // Ecrire
                         GoHome();
                         break;
                     case "usage":
                         Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
-                        Console.WriteLine("+----+ Utilisation +----+"); // Ecrire
+                        Console.WriteLine("+----+ Usage +----+"); // Ecrire
                         Console.WriteLine(""); // Ecrire
                         for (int i = 0; i < Definitions.Commands.Length; i++)
                         {
@@ -145,6 +145,20 @@ namespace LABS_Experimental_Console
                         counter = 0;
                         numbers = new int[10000];
                         Sum();
+                        break;
+                    case "searchfile":
+                        Console.WriteLine("Wich file(s) do you wanna search? (ex: file.png)");
+                        Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
+                        Console.Write(">>> "); // Ecrire
+                        Console.ResetColor(); // Mettre la couleur par défaut
+                        string file = Console.ReadLine();
+                        Console.WriteLine("Where do you wanna search the files? (ex: C:/Users/Name/Desktop");
+                        Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
+                        Console.Write(">>> "); // Ecrire
+                        Console.ResetColor(); // Mettre la couleur par défaut
+                        string path = Console.ReadLine();
+                        Functions.SearchFiles(file, path);
+                        GoHome();
                         break;
                 }
             }

@@ -25,6 +25,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Runtime.InteropServices;
@@ -37,29 +38,30 @@ namespace LABS_Experimental_Console.Classes
         public static void WriteHelp()
         {
             Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
-            Console.WriteLine("+----+ Aide +----+"); // Ecrire
+            Console.WriteLine("+----+ Help +----+"); // Ecrire
             Console.ResetColor(); // Mettre la couleur par défaut
-            Console.WriteLine("Voici les diverses commandes disponibles :"); // Ecrire
+            Console.WriteLine("Here's all the available commands:"); // Ecrire
             Console.WriteLine(""); // Ecrire
-            Console.WriteLine("about : Affiche les crédits"); // Ecrire
+            Console.WriteLine("about : Shows credits"); // Ecrire
             Console.WriteLine("beep : Beep"); // Ecrire
-            Console.WriteLine("clear, cls : Efface la console"); // Ecrire
-            Console.WriteLine("exit : Ferme la console"); // Ecrire
-            Console.WriteLine("help : Affiche l'aide"); // Ecrire
-            Console.WriteLine("list : Affiche les commandes"); // Ecrire
-            Console.WriteLine("logo : Affiche le logo"); // Ecrire
-            Console.WriteLine("repo : Ouvre le dépôt GitHub"); // Ecrire
-            Console.WriteLine("update : Vérifie si des mises à jour sont disponibles"); // Ecrire
-            Console.WriteLine("usage : Affiche commant utiliser les commandes"); // Ecrire
-            Console.WriteLine("ver : Affiche la version"); // Ecrire
+            Console.WriteLine("clear, cls : Clears the console"); // Ecrire
+            Console.WriteLine("exit : Closes the console"); // Ecrire
+            Console.WriteLine("help : Dhows help"); // Ecrire
+            Console.WriteLine("list : Shows commands"); // Ecrire
+            Console.WriteLine("logo : Show le logo"); // Ecrire
+            Console.WriteLine("repo : Opens the GitHub repo"); // Ecrire
+            Console.WriteLine("update : Checks updates"); // Ecrire
+            Console.WriteLine("usage :Shows how to use commands"); // Ecrire
+            Console.WriteLine("ver : Shows the version"); // Ecrire
+            Console.WriteLine("searchfile : Search throught files"); // Ecrire
         }
 
         public static void WriteCommands() 
         {
             Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
-            Console.WriteLine("+----+ Liste des commandes +----+"); // Ecrire
+            Console.WriteLine("+----+ Commands +----+"); // Ecrire
             Console.ResetColor(); // Mettre la couleur par défaut
-            Console.WriteLine("Voici la liste des commandes"); // Ecrire
+            Console.WriteLine("Here's the list of all the commands"); // Ecrire
             Console.WriteLine(""); // Ecrire
             for (int i = 0; i < Definitions.Commands.Length; i++)
             {
@@ -93,6 +95,28 @@ namespace LABS_Experimental_Console.Classes
             return res;
         }
 
+        public static void SearchFiles(string fileName, string path)
+        {
+            try
+            {
+                foreach (string file in Directory.GetFiles(path, fileName, SearchOption.AllDirectories))
+                {
+                    Console.Write("Found file ");
+                    Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
+                    Console.Write("> "); // Ecrire
+                    Console.ForegroundColor = ConsoleColor.DarkYellow;
+                    Console.WriteLine(file);
+                    Console.ResetColor(); // Mettre la couleur par défaut
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"[{ex.Source}] An error occured: " + ex.Message);
+                Console.ResetColor();
+            }
+        }
+
         public static bool OpenBrowser(string url)
         {
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
@@ -119,43 +143,46 @@ namespace LABS_Experimental_Console.Classes
             switch (command)
             {
                 case "help":
-                    Console.WriteLine("Utilisation de 'help' : help"); // Ecrire
+                    Console.WriteLine("Usage of 'help' : help"); // Ecrire
                     break;
                 case "ver":
-                    Console.WriteLine("Utilisation de 'ver' : ver"); // Ecrire
+                    Console.WriteLine("Usage of 'ver' : ver"); // Ecrire
                     break;
                 case "update":
-                    Console.WriteLine("Utilisation de 'update' : update"); // Ecrire
+                    Console.WriteLine("Usage of 'update' : update"); // Ecrire
                     break;
                 case "list":
-                    Console.WriteLine("Utilisation de 'list' : list"); // Ecrire
+                    Console.WriteLine("Usage of 'list' : list"); // Ecrire
                     break;
                 case "exit":
-                    Console.WriteLine("Utilisation de 'exit' : exit"); // Ecrire
+                    Console.WriteLine("Usage of 'exit' : exit"); // Ecrire
                     break;
                 case "about":
-                    Console.WriteLine("Utilisation de 'about' : about"); // Ecrire
+                    Console.WriteLine("Usage of 'about' : about"); // Ecrire
                     break;
                 case "clear":
-                    Console.WriteLine("Utilisation de 'clear' : clear"); // Ecrire
+                    Console.WriteLine("Usage of 'clear' : clear"); // Ecrire
                     break;
                 case "cls":
-                    Console.WriteLine("Utilisation de 'cls' : cls"); // Ecrire
+                    Console.WriteLine("Usage of 'cls' : cls"); // Ecrire
                     break;
                 case "beep":
-                    Console.WriteLine("Utilisation de 'beep' : beep"); // Ecrire
+                    Console.WriteLine("Usage of 'beep' : beep"); // Ecrire
                     break;
                 case "logo":
-                    Console.WriteLine("Utilisation de 'logo' : logo"); // Ecrire
+                    Console.WriteLine("Usage of 'logo' : logo"); // Ecrire
                     break;
                 case "repo":
-                    Console.WriteLine("Utilisation de 'repo' : repo"); // Ecrire
+                    Console.WriteLine("Usage of 'repo' : repo"); // Ecrire
                     break;
                 case "usage":
-                    Console.WriteLine("Utilisation de 'usage' : usage"); // Ecrire
+                    Console.WriteLine("Usage of 'usage' : usage"); // Ecrire
                     break;
                 case "sum":
-                    Console.WriteLine("Utilisation de 'sum' : sum"); // Ecrire
+                    Console.WriteLine("Usage of 'sum' : sum"); // Ecrire
+                    break;
+                case "searchfile":
+                    Console.WriteLine("Usage of 'searchfile' : searchfile"); // Ecrire
                     break;
             }
         }
