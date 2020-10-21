@@ -54,6 +54,7 @@ namespace LABS_Experimental_Console.Classes
             Console.WriteLine("usage :Shows how to use commands"); // Ecrire
             Console.WriteLine("ver : Shows the version"); // Ecrire
             Console.WriteLine("searchfile : Search throught files"); // Ecrire
+            Console.WriteLine("test : A test command that can be changed"); // Ecrire
         }
 
         public static void WriteCommands() 
@@ -93,6 +94,12 @@ namespace LABS_Experimental_Console.Classes
                 res = false;
             }
             return res;
+        }
+
+        public static T[] Append<T>(this T[] array, T item)
+        {
+            T[] items = { item };
+            return new List<T>(array.Concat(items)).ToArray();
         }
 
         public static void SearchFiles(string fileName, string path)
@@ -183,6 +190,9 @@ namespace LABS_Experimental_Console.Classes
                     break;
                 case "searchfile":
                     Console.WriteLine("Usage of 'searchfile' : searchfile"); // Ecrire
+                    break;
+                case "test":
+                    Console.WriteLine("Usage of 'test' : test");
                     break;
             }
         }

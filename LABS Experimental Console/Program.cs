@@ -160,6 +160,17 @@ namespace LABS_Experimental_Console
                         Functions.SearchFiles(file, path);
                         GoHome();
                         break;
+                    case "test":
+                        int[] intarr = { 1, 2, 3, 4 };
+                        int it = 5;
+                        int[] newarr = intarr.Append(it);
+                        for (int i = 0; i < newarr.Length; i++)
+                        {
+                            Console.WriteLine(newarr[i]);
+                        }
+
+                        GoHome();
+                        break;
                 }
             }
         }
