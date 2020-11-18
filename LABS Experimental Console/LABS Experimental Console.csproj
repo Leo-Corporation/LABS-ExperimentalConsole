@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>LABS_Experimental_Console</RootNamespace>
     <ApplicationIcon>LABS Logo.ico</ApplicationIcon>
     <AssemblyVersion>1.4.0.2009</AssemblyVersion>
