@@ -213,7 +213,7 @@ namespace LABS_Experimental_Console
         {
             Console.ForegroundColor = ConsoleColor.Yellow; // Changer la couleur
             Console.WriteLine(""); // Ecrire
-            Console.WriteLine("Pour commencer, tapez une commande. Tapez 'help' pour afficher l'aide."); // Ecrire
+            Console.WriteLine("To get started, type a command. Type 'help' to show help."); // Ecrire
             Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
             Console.Write(">>> "); // Ecrire
             Console.ResetColor(); // Mettre la couleur par défaut
@@ -223,7 +223,7 @@ namespace LABS_Experimental_Console
         public void WriteWrongCommandMessage()
         {
             Console.ForegroundColor = ConsoleColor.Red; // Mettre en rouge
-            Console.WriteLine("La commande que vous avez executée n'existe pas."); // Afficher le message
+            Console.WriteLine("The command that you wrote doesn't exist. Type 'help' to get help."); // Afficher le message
             BeepAsync(1000, 100, 2);
             Console.ResetColor(); // Mettre la couleur par défaut
             GoHome();
