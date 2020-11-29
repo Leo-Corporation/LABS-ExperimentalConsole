@@ -55,6 +55,7 @@ namespace LABS_Experimental_Console.Classes
             Console.WriteLine("ver : Shows the version"); // Ecrire
             Console.WriteLine("searchfile : Search throught files"); // Ecrire
             Console.WriteLine("test : A test command that can be changed"); // Ecrire
+            Console.WriteLine("dotnet : Allows you to get the .NET version"); // Ecrire
         }
 
         public static void WriteCommands() 
@@ -193,6 +194,9 @@ namespace LABS_Experimental_Console.Classes
                     break;
                 case "test":
                     Console.WriteLine("Usage of 'test' : test");
+                    break;
+                case "dotnet":
+                    Console.WriteLine("Usage of 'dotnet' : dotnet");
                     break;
             }
         }

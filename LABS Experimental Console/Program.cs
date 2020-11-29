@@ -83,7 +83,7 @@ namespace LABS_Experimental_Console
                         {
                             Console.ForegroundColor = ConsoleColor.Blue;
                             Console.WriteLine(""); // Ecrire
-                            Console.WriteLine("Updates are avialable, do you wanna install them?"); // Ecrire
+                            Console.WriteLine("Updates are available, do you wanna install them?"); // Ecrire
                             Console.WriteLine(" ___________         __________"); // Ecrire
                             Console.WriteLine("|  Yes (y)  |       |  No (n)  |"); // Ecrire
                             Console.WriteLine(" ¯¯¯¯¯¯¯¯¯¯¯         ¯¯¯¯¯¯¯¯¯¯"); // Ecrire
@@ -169,6 +169,10 @@ namespace LABS_Experimental_Console
                             Console.WriteLine(newarr[i]);
                         }
 
+                        GoHome();
+                        break;
+                    case "dotnet":
+                        Console.WriteLine(".NET v" + Environment.Version.ToString());
                         GoHome();
                         break;
                 }
