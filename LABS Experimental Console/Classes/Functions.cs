@@ -21,6 +21,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE. 
 */
+using LeoCorpLibrary.Core;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -143,6 +144,14 @@ namespace LABS_Experimental_Console.Classes
                 return true;
             }
             return false;
+        }
+
+        public static void TestLeoCorpLibrary()
+        {
+            Console.WriteLine($"The area of circle where R=10cm is {Maths.Circle.GetArea(10)}");
+            Console.WriteLine($"The 55;21;125 RGB color in HEX is #{ColorsConverter.RGBtoHEX(55, 21, 125).Value}");
+            Console.WriteLine($"The current Windows version is {Env.GetWindowsVersion()}");
+            Console.WriteLine($"The current Uniw Time is {Env.GetUnixTime()}");
         }
 
         public static void PrintUsage(string command)

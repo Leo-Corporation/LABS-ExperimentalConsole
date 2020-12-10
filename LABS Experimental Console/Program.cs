@@ -175,6 +175,11 @@ namespace LABS_Experimental_Console
                         Console.WriteLine(".NET v" + Environment.Version.ToString());
                         GoHome();
                         break;
+
+                    case "leocorplibrary":
+                        Functions.TestLeoCorpLibrary();
+                        GoHome();
+                        break;
                 }
             }
         }
