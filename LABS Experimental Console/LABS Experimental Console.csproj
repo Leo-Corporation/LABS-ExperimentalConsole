@@ -15,4 +15,8 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="LeoCorpLibrary.Core" Version="3.0.0.2012-pre1" />
+  </ItemGroup>
+
 </Project>
