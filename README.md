@@ -16,6 +16,9 @@ LABS Experimental Console has the following commands:
 * usage
 * beep
 * sum
+* searchfile
+* test
+* dotnet
 
 ## What to expect?
 This console has no defined gaol, so don't be surprised if we add completly new features or NuGet packages to this project. It is all about test and experimentation.
