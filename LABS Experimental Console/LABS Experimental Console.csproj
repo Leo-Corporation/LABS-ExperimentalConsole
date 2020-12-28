@@ -5,13 +5,13 @@
     <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>LABS_Experimental_Console</RootNamespace>
     <ApplicationIcon>LABS Logo.ico</ApplicationIcon>
-    <AssemblyVersion>1.5.0.2011</AssemblyVersion>
-    <FileVersion>1.5.0.2011</FileVersion>
+    <AssemblyVersion>1.6.0.2012</AssemblyVersion>
+    <FileVersion>1.6.0.2012</FileVersion>
     <Company>Léo Corporation</Company>
     <Authors>Léo Corporation</Authors>
     <Copyright>2020</Copyright>
     <RepositoryUrl>https://github.com/Leo-Corporation/LABS-ExperimentalConsole</RepositoryUrl>
-    <Version>1.5.0.2011</Version>
+    <Version>1.6.0.2012</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
