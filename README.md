@@ -1,9 +1,37 @@
-# LABS Experimental Console ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Leo-Corporation/LABS-ExperimentalConsole/.NET%20Core) ![GitHub](https://img.shields.io/github/license/Leo-Corporation/LABS-ExperimentalConsole)
+![GitHub contributors](https://img.shields.io/github/contributors/Leo-Corporation/LABS-ExperimentalConsole)
+![GitHub issues](https://img.shields.io/github/issues/Leo-Corporation/LABS-ExperimentalConsole)
+![GitHub](https://img.shields.io/github/license/Leo-Corporation/LABS-ExperimentalConsole)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Leo-Corporation/LABS-ExperimentalConsole/.NET%20Core) 
+<br />
+<p align="center">
+  <a href="https://github.com/Leo-Corporation/LABS-Experiences">
+    <img src=".github/images/logo.png" alt="Logo" width="80" height="80">
+  </a>
+
+  <h3 align="center">LABS-ExperimentalConsole</h3>
+
+  <p align="center">
+    A C# .NET 5 console application.
+    <br />
+    <a href="https://github.com/Leo-Corporation/LABS-ExperimentalConsole/releases"><strong>Download »</strong></a>
+    <br />
+    <a href="https://github.com/Leo-Corporation/LABS-ExperimentalConsole/issues/new?assignees=&labels=bug&template=bug_report.md&title=%5BBug%5D+">Report Bug</a>
+    ·
+    <a href="https://github.com/Leo-Corporation/LABS-ExperimentalConsole/issues/new?assignees=&labels=suggestion+enhancement&template=feature_request.md&title=%5BEnhancement%5D+">Request Feature</a>
+    ·
+    <a href="https://en.leocorp.fr/labs">Learn more</a>
+
+  </p>
+</p>
+
 ## Introduction
 LABS ExperimentalConsole is a console application that is dedicated to test on C#, .NET, and more.
 It has been rewritten in C# and in .NET 5.
 ## Commands
 LABS Experimental Console has the following commands:
+<details>
+  <summary>Click here to expand the commands list</summary>
+
 * ver
 * help
 * clear
@@ -20,6 +48,10 @@ LABS Experimental Console has the following commands:
 * test
 * dotnet
 * leocorplibrary
+
+</details>
+
+
 
 ## What to expect?
 This console has no defined gaol, so don't be surprised if we add completly new features or NuGet packages to this project. It is all about test and experimentation.
