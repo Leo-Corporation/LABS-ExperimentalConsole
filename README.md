@@ -4,7 +4,7 @@
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Leo-Corporation/LABS-ExperimentalConsole/.NET%20Core) 
 <br />
 <p align="center">
-  <a href="https://github.com/Leo-Corporation/LABS-Experiences">
+  <a href="https://github.com/Leo-Corporation/LABS-ExperimentalConsole">
     <img src=".github/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
