@@ -57,7 +57,7 @@ LABS Experimental Console has the following commands:
 This console has no defined gaol, so don't be surprised if we add completly new features or NuGet packages to this project. It is all about test and experimentation.
 
 ## Miscellaneous informations
-Go to the [documentation](https://github.com/Leo-Corporation/LABS-ExperimentalConsole/wiki) for more informations.
-Click [here](https://github.com/Leo-Corporation/LABS-ExperimentalConsole/wiki/Commands) to get more informations on the commands and their usage.
+- Go to the [documentation](https://github.com/Leo-Corporation/LABS-ExperimentalConsole/wiki) for more informations.
+- Click [here](https://github.com/Leo-Corporation/LABS-ExperimentalConsole/wiki/Commands) to get more informations on the commands and their usage.
 ## License
 Project under the [MIT License](https://github.com/Leo-Corporation/LABS-ExperimentalConsole/blob/master/LICENSE.md).
