@@ -22,6 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE. 
 */
 using LABS_Experimental_Console.Classes;
+using LeoCorpLibrary.Core;
 using System;
 using System.Diagnostics;
 using System.Linq;
@@ -178,6 +179,10 @@ namespace LABS_Experimental_Console
 
                     case "leocorplibrary":
                         Functions.TestLeoCorpLibrary();
+                        GoHome();
+                        break;
+                    case "passwords":
+                        Functions.MultiplePasswords();
                         GoHome();
                         break;
                 }

@@ -31,6 +31,7 @@ using System.Linq;
 using System.Net;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace LABS_Experimental_Console.Classes
 {
@@ -57,6 +58,7 @@ namespace LABS_Experimental_Console.Classes
             Console.WriteLine("searchfile : Search throught files"); // Ecrire
             Console.WriteLine("test : A test command that can be changed"); // Ecrire
             Console.WriteLine("dotnet : Allows you to get the .NET version"); // Ecrire
+            Console.WriteLine("passwords : Allows you to generate multiple passwords"); // Ecrire
         }
 
         public static void WriteCommands() 
@@ -144,6 +146,15 @@ namespace LABS_Experimental_Console.Classes
                 return true;
             }
             return false;
+        }
+
+        public static void MultiplePasswords()
+		{
+            List<string> passwords = Password.GenerateAmount(10, 50, PasswordPresets.Complex);
+            for (int i = 0; i < passwords.Count; i++)
+			{
+                Console.WriteLine($"{i+1}. {passwords[i]}"); // Print message
+			}
         }
 
         public static void TestLeoCorpLibrary()
