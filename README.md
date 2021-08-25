@@ -54,7 +54,7 @@ LABS Experimental Console has the following commands:
 
 
 ## What to expect?
-This console has no defined gaol, so don't be surprised if we add completly new features or NuGet packages to this project. It is all about test and experimentation.
+This console has no defined goal, so don't be surprised if we add completly new features or NuGet packages to this project. It is all about test and experimentation.
 
 ## Miscellaneous informations
 - Go to the [documentation](https://github.com/Leo-Corporation/LABS-ExperimentalConsole/wiki) for more informations.
