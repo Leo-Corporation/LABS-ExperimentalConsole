@@ -8,7 +8,7 @@
     <img src=".github/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">LABS-ExperimentalConsole</h3>
+  <h1 align="center">LABS-ExperimentalConsole</h1>
 
   <p align="center">
     A C# .NET 5 console application.
