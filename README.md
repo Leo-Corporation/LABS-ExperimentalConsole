@@ -19,7 +19,7 @@
     ·
     <a href="https://github.com/Leo-Corporation/LABS-ExperimentalConsole/issues/new?assignees=&labels=enhancement&template=feature-request.yml&title=%5BEnhancement%5D+">Request Feature</a>
     ·
-    <a href="https://en.leocorp.fr/labs">Learn more</a>
+    <a href="https://leocorporation.dev/labs">Learn more</a>
 
   </p>
 </p>
