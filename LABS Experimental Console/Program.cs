@@ -109,14 +109,23 @@ namespace LABS_Experimental_Console
 						}
 						break;
 					case "beep":
-						Console.Beep(1500, 300); // Beep
-						Console.WriteLine("Beep !"); // Ecrire
-						System.Threading.Thread.Sleep(300);
-						Console.Beep(1500, 300); // Beep
-						Console.WriteLine("Beep !"); // Ecrire
-						System.Threading.Thread.Sleep(100);
-						Console.Beep(1500, 300); // Beep
-						Console.WriteLine("Beep !"); // Ecrire
+						if (Env.CurrentOperatingSystem == OperatingSystems.Windows)
+						{
+							Console.Beep(1500, 300); // Beep
+							Console.WriteLine("Beep !"); // Ecrire
+							System.Threading.Thread.Sleep(300);
+							Console.Beep(1500, 300); // Beep
+							Console.WriteLine("Beep !"); // Ecrire
+							System.Threading.Thread.Sleep(100);
+							Console.Beep(1500, 300); // Beep
+							Console.WriteLine("Beep !"); // Ecrire 
+						}
+						else
+						{
+							Console.ForegroundColor = ConsoleColor.Red; // Set color to red
+							Console.WriteLine("The beep command is only available on Windows.");
+							Console.ResetColor();
+						}
 						GoHome();
 						break;
 					case "logo":
