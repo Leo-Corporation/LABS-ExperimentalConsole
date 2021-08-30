@@ -30,242 +30,242 @@ using System.Threading.Tasks;
 
 namespace LABS_Experimental_Console
 {
-    class Program
-    {
-        int result = 0; // Résultat
-        int[] numbers = new int[10000]; // Nombres
-        int counter = 0;
-        static void Main(string[] args)
-        {
-            Console.Title = "LABS Experimental Console v" + Definitions.Version; // Mettre le titre
-            Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
-            Console.WriteLine("LABS Experimental Console v{0}, running on .NET {1}", Definitions.Version, Environment.Version); // Ecrire
-            new Program().GoHome();
-        }
+	class Program
+	{
+		int result = 0; // Résultat
+		int[] numbers = new int[10000]; // Nombres
+		int counter = 0;
+		static void Main(string[] args)
+		{
+			Console.Title = "LABS Experimental Console v" + Definitions.Version; // Mettre le titre
+			Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
+			Console.WriteLine("LABS Experimental Console v{0}, running on .NET {1}", Definitions.Version, Environment.Version); // Ecrire
+			new Program().GoHome();
+		}
 
-        public void ExecuteCommand(string command)
-        {
-            if (!IsCommandExist(command))
-            {
-                WriteWrongCommandMessage();
-            }
-            else
-            {
-                switch (command.ToLower())
-                {
-                    case "help": // Si la commande est "help"
-                        Functions.WriteHelp();
-                        GoHome();
-                        break;
-                    case "ver": // Si la commande est "help"
-                        Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
-                        Console.WriteLine("Version {0}, Copyright {1} - Léo Corporation", Definitions.Version, DateTime.Now.Year); // Ecrire
-                        GoHome();
-                        break;
-                    case "about": // Si la commande est "help"
-                        Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
-                        Console.WriteLine("LABS Experimental Console © {0} - Léo Corporation", DateTime.Now.Year); // Ecrire
-                        GoHome();
-                        break;
-                    case "cls":
-                        Console.Clear(); // Effacer
-                        GoHome();
-                        break;
-                    case "clear":
-                        Console.Clear(); // Effacer
-                        GoHome();
-                        break;
-                    case "list":
-                        Functions.WriteCommands();
-                        GoHome();
-                        break;
-                    case "update":
-                        if (Functions.IsUpdateAvailable())
-                        {
-                            Console.ForegroundColor = ConsoleColor.Blue;
-                            Console.WriteLine(""); // Ecrire
-                            Console.WriteLine("Updates are available, do you wanna install them?"); // Ecrire
-                            Console.WriteLine(" ___________         __________"); // Ecrire
-                            Console.WriteLine("|  Yes (y)  |       |  No (n)  |"); // Ecrire
-                            Console.WriteLine(" ¯¯¯¯¯¯¯¯¯¯¯         ¯¯¯¯¯¯¯¯¯¯"); // Ecrire
-                            Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
-                            Console.Write(">>> "); // Ecrire
-                            Console.ResetColor(); // Mettre la couleur par défaut
-                            if (Console.ReadLine() == "y")
-                            {
-                                Functions.OpenBrowser("https://github.com/Leo-Corporation/LABS-ExperimentalConsole/releases"); // Ouvrir la page web
-                                GoHome();
-                            }
-                            else
-                            {
-                                GoHome();
-                            }
-                        }
-                        else
-                        {
-                            Console.ForegroundColor = ConsoleColor.Blue;
-                            Console.WriteLine("No updates are available."); // Ecrire
-                            GoHome();
-                        }
-                        break;
-                    case "beep":
-                        Console.Beep(1500, 300); // Beep
-                        Console.WriteLine("Beep !"); // Ecrire
-                        System.Threading.Thread.Sleep(300);
-                        Console.Beep(1500, 300); // Beep
-                        Console.WriteLine("Beep !"); // Ecrire
-                        System.Threading.Thread.Sleep(100);
-                        Console.Beep(1500, 300); // Beep
-                        Console.WriteLine("Beep !"); // Ecrire
-                        GoHome();
-                        break;
-                    case "logo":
-                        Console.ForegroundColor = ConsoleColor.Blue;
-                        Functions.PrintLogo();
-                        GoHome();
-                        break;
-                    case "repo":
-                        Functions.OpenBrowser("https://github.com/Leo-Corporation/LABS-ExperimentalConsole/"); // Ouvrir le dépôt
-                        Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
-                        Console.WriteLine("The GitHub repo has been shown in your default browser."); // Ecrire
-                        GoHome();
-                        break;
-                    case "usage":
-                        Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
-                        Console.WriteLine("+----+ Usage +----+"); // Ecrire
-                        Console.WriteLine(""); // Ecrire
-                        for (int i = 0; i < Definitions.Commands.Length; i++)
-                        {
-                            Functions.PrintUsage(Definitions.Commands[i]); // Imprimer l'utilisation des commandes
-                        }
-                        
-                        GoHome();
-                        break;
-                    case "sum":
-                        result = 0;
-                        counter = 0;
-                        numbers = new int[10000];
-                        Sum();
-                        break;
-                    case "searchfile":
-                        Console.WriteLine("Wich file(s) do you wanna search? (ex: file.png)");
-                        Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
-                        Console.Write(">>> "); // Ecrire
-                        Console.ResetColor(); // Mettre la couleur par défaut
-                        string file = Console.ReadLine();
-                        Console.WriteLine("Where do you wanna search the files? (ex: C:/Users/Name/Desktop");
-                        Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
-                        Console.Write(">>> "); // Ecrire
-                        Console.ResetColor(); // Mettre la couleur par défaut
-                        string path = Console.ReadLine();
-                        Functions.SearchFiles(file, path);
-                        GoHome();
-                        break;
-                    case "test":
-                        int[] intarr = { 1, 2, 3, 4 };
-                        int it = 5;
-                        int[] newarr = intarr.Append(it);
-                        for (int i = 0; i < newarr.Length; i++)
-                        {
-                            Console.WriteLine(newarr[i]);
-                        }
+		public void ExecuteCommand(string command)
+		{
+			if (!IsCommandExist(command))
+			{
+				WriteWrongCommandMessage();
+			}
+			else
+			{
+				switch (command.ToLower())
+				{
+					case "help": // Si la commande est "help"
+						Functions.WriteHelp();
+						GoHome();
+						break;
+					case "ver": // Si la commande est "help"
+						Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
+						Console.WriteLine("Version {0}, Copyright {1} - Léo Corporation", Definitions.Version, DateTime.Now.Year); // Ecrire
+						GoHome();
+						break;
+					case "about": // Si la commande est "help"
+						Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
+						Console.WriteLine("LABS Experimental Console © {0} - Léo Corporation", DateTime.Now.Year); // Ecrire
+						GoHome();
+						break;
+					case "cls":
+						Console.Clear(); // Effacer
+						GoHome();
+						break;
+					case "clear":
+						Console.Clear(); // Effacer
+						GoHome();
+						break;
+					case "list":
+						Functions.WriteCommands();
+						GoHome();
+						break;
+					case "update":
+						if (Functions.IsUpdateAvailable())
+						{
+							Console.ForegroundColor = ConsoleColor.Blue;
+							Console.WriteLine(""); // Ecrire
+							Console.WriteLine("Updates are available, do you wanna install them?"); // Ecrire
+							Console.WriteLine(" ___________         __________"); // Ecrire
+							Console.WriteLine("|  Yes (y)  |       |  No (n)  |"); // Ecrire
+							Console.WriteLine(" ¯¯¯¯¯¯¯¯¯¯¯         ¯¯¯¯¯¯¯¯¯¯"); // Ecrire
+							Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
+							Console.Write(">>> "); // Ecrire
+							Console.ResetColor(); // Mettre la couleur par défaut
+							if (Console.ReadLine() == "y")
+							{
+								Functions.OpenBrowser("https://github.com/Leo-Corporation/LABS-ExperimentalConsole/releases"); // Ouvrir la page web
+								GoHome();
+							}
+							else
+							{
+								GoHome();
+							}
+						}
+						else
+						{
+							Console.ForegroundColor = ConsoleColor.Blue;
+							Console.WriteLine("No updates are available."); // Ecrire
+							GoHome();
+						}
+						break;
+					case "beep":
+						Console.Beep(1500, 300); // Beep
+						Console.WriteLine("Beep !"); // Ecrire
+						System.Threading.Thread.Sleep(300);
+						Console.Beep(1500, 300); // Beep
+						Console.WriteLine("Beep !"); // Ecrire
+						System.Threading.Thread.Sleep(100);
+						Console.Beep(1500, 300); // Beep
+						Console.WriteLine("Beep !"); // Ecrire
+						GoHome();
+						break;
+					case "logo":
+						Console.ForegroundColor = ConsoleColor.Blue;
+						Functions.PrintLogo();
+						GoHome();
+						break;
+					case "repo":
+						Functions.OpenBrowser("https://github.com/Leo-Corporation/LABS-ExperimentalConsole/"); // Ouvrir le dépôt
+						Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
+						Console.WriteLine("The GitHub repo has been shown in your default browser."); // Ecrire
+						GoHome();
+						break;
+					case "usage":
+						Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
+						Console.WriteLine("+----+ Usage +----+"); // Ecrire
+						Console.WriteLine(""); // Ecrire
+						for (int i = 0; i < Definitions.Commands.Length; i++)
+						{
+							Functions.PrintUsage(Definitions.Commands[i]); // Imprimer l'utilisation des commandes
+						}
 
-                        GoHome();
-                        break;
-                    case "dotnet":
-                        Console.WriteLine(".NET v" + Environment.Version.ToString());
-                        GoHome();
-                        break;
+						GoHome();
+						break;
+					case "sum":
+						result = 0;
+						counter = 0;
+						numbers = new int[10000];
+						Sum();
+						break;
+					case "searchfile":
+						Console.WriteLine("Wich file(s) do you wanna search? (ex: file.png)");
+						Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
+						Console.Write(">>> "); // Ecrire
+						Console.ResetColor(); // Mettre la couleur par défaut
+						string file = Console.ReadLine();
+						Console.WriteLine("Where do you wanna search the files? (ex: C:/Users/Name/Desktop");
+						Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
+						Console.Write(">>> "); // Ecrire
+						Console.ResetColor(); // Mettre la couleur par défaut
+						string path = Console.ReadLine();
+						Functions.SearchFiles(file, path);
+						GoHome();
+						break;
+					case "test":
+						int[] intarr = { 1, 2, 3, 4 };
+						int it = 5;
+						int[] newarr = intarr.Append(it);
+						for (int i = 0; i < newarr.Length; i++)
+						{
+							Console.WriteLine(newarr[i]);
+						}
 
-                    case "leocorplibrary":
-                        Functions.TestLeoCorpLibrary();
-                        GoHome();
-                        break;
-                    case "passwords":
-                        Functions.MultiplePasswords();
-                        GoHome();
-                        break;
-                }
-            }
-        }
-        void Sum()
-        {
-            Console.WriteLine("Entrez un nombre"); // Ecrire
-            Console.WriteLine(""); // Ecrire
-            Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
-            Console.Write(">>> "); // Ecrire
-            Console.ResetColor(); // Mettre la couleur par défaut
-            int number = int.Parse(Console.ReadLine());
-            numbers[counter] = number;
-            counter++;
-            Console.WriteLine("Voulez-vous ajouter un autre nombre ? (y/n)"); // Ecrire
-            Console.WriteLine(""); // Ecrire
-            Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
-            Console.Write(">>> "); // Ecrire
-            Console.ResetColor(); // Mettre la couleur par défaut
-            if (Console.ReadLine() == "y")
-            {
-                Sum();
-            }
-            else
-            {
-                GetResult(numbers); // Obtenir le résultat
-                Console.WriteLine($"Résultat : {result}");
-                GoHome();
-            }
-        }
+						GoHome();
+						break;
+					case "dotnet":
+						Console.WriteLine(".NET v" + Environment.Version.ToString());
+						GoHome();
+						break;
 
-        void GetResult(int[] numbers)
-        {
-            foreach (int number in numbers)
-            {
-                result += number;
-            }
-        }
+					case "leocorplibrary":
+						Functions.TestLeoCorpLibrary();
+						GoHome();
+						break;
+					case "passwords":
+						Functions.MultiplePasswords();
+						GoHome();
+						break;
+				}
+			}
+		}
+		void Sum()
+		{
+			Console.WriteLine("Entrez un nombre"); // Ecrire
+			Console.WriteLine(""); // Ecrire
+			Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
+			Console.Write(">>> "); // Ecrire
+			Console.ResetColor(); // Mettre la couleur par défaut
+			int number = int.Parse(Console.ReadLine());
+			numbers[counter] = number;
+			counter++;
+			Console.WriteLine("Voulez-vous ajouter un autre nombre ? (y/n)"); // Ecrire
+			Console.WriteLine(""); // Ecrire
+			Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
+			Console.Write(">>> "); // Ecrire
+			Console.ResetColor(); // Mettre la couleur par défaut
+			if (Console.ReadLine() == "y")
+			{
+				Sum();
+			}
+			else
+			{
+				GetResult(numbers); // Obtenir le résultat
+				Console.WriteLine($"Résultat : {result}");
+				GoHome();
+			}
+		}
 
-        public void GoHome()
-        {
-            Console.ForegroundColor = ConsoleColor.Yellow; // Changer la couleur
-            Console.WriteLine(""); // Ecrire
-            Console.WriteLine("To get started, type a command. Type 'help' to show help."); // Ecrire
-            Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
-            Console.Write(">>> "); // Ecrire
-            Console.ResetColor(); // Mettre la couleur par défaut
-            ExecuteCommand(Console.ReadLine());
-        }
+		void GetResult(int[] numbers)
+		{
+			foreach (int number in numbers)
+			{
+				result += number;
+			}
+		}
 
-        public void WriteWrongCommandMessage()
-        {
-            Console.ForegroundColor = ConsoleColor.Red; // Mettre en rouge
-            Console.WriteLine("The command that you wrote doesn't exist. Type 'help' to get help."); // Afficher le message
-            BeepAsync(1000, 100, 2);
-            Console.ResetColor(); // Mettre la couleur par défaut
-            GoHome();
-        }
+		public void GoHome()
+		{
+			Console.ForegroundColor = ConsoleColor.Yellow; // Changer la couleur
+			Console.WriteLine(""); // Ecrire
+			Console.WriteLine("To get started, type a command. Type 'help' to show help."); // Ecrire
+			Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
+			Console.Write(">>> "); // Ecrire
+			Console.ResetColor(); // Mettre la couleur par défaut
+			ExecuteCommand(Console.ReadLine());
+		}
 
-        public void BeepAsync(int frequency, int duration, int repeat)
-        {
-            Task.Run(() =>
-            {
-                for (int i = 0; i < repeat; i++)
-                {
-                    Console.Beep(frequency, duration); // Beep
-                }
-            });
-        }
+		public void WriteWrongCommandMessage()
+		{
+			Console.ForegroundColor = ConsoleColor.Red; // Mettre en rouge
+			Console.WriteLine("The command that you wrote doesn't exist. Type 'help' to get help."); // Afficher le message
+			BeepAsync(1000, 100, 2);
+			Console.ResetColor(); // Mettre la couleur par défaut
+			GoHome();
+		}
 
-        public bool IsCommandExist(string command)
-        {
-            bool res = true; // Résultat
-            if (Definitions.Commands.Contains(command.ToLower()))
-            {
-                res = true;
-            }
-            else
-            {
-                res = false;
-            }
-            return res;
-        }
-    }
+		public void BeepAsync(int frequency, int duration, int repeat)
+		{
+			Task.Run(() =>
+			{
+				for (int i = 0; i < repeat; i++)
+				{
+					Console.Beep(frequency, duration); // Beep
+				}
+			});
+		}
+
+		public bool IsCommandExist(string command)
+		{
+			bool res = true; // Résultat
+			if (Definitions.Commands.Contains(command.ToLower()))
+			{
+				res = true;
+			}
+			else
+			{
+				res = false;
+			}
+			return res;
+		}
+	}
 }
