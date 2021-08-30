@@ -39,39 +39,39 @@ namespace LABS_Experimental_Console.Classes
 	{
 		public static void WriteHelp()
 		{
-			Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
-			Console.WriteLine("+----+ Help +----+"); // Ecrire
-			Console.ResetColor(); // Mettre la couleur par défaut
-			Console.WriteLine("Here's all the available commands:"); // Ecrire
-			Console.WriteLine(""); // Ecrire
-			Console.WriteLine("about : Shows credits"); // Ecrire
-			Console.WriteLine("beep : Beep"); // Ecrire
-			Console.WriteLine("clear, cls : Clears the console"); // Ecrire
-			Console.WriteLine("exit : Closes the console"); // Ecrire
-			Console.WriteLine("help : Dhows help"); // Ecrire
-			Console.WriteLine("list : Shows commands"); // Ecrire
-			Console.WriteLine("logo : Show le logo"); // Ecrire
-			Console.WriteLine("repo : Opens the GitHub repo"); // Ecrire
-			Console.WriteLine("update : Checks updates"); // Ecrire
-			Console.WriteLine("usage : Shows how to use commands"); // Ecrire
-			Console.WriteLine("ver : Shows the version"); // Ecrire
-			Console.WriteLine("searchfile : Search throught files"); // Ecrire
-			Console.WriteLine("test : A test command that can be changed"); // Ecrire
-			Console.WriteLine("dotnet : Allows you to get the .NET version"); // Ecrire
-			Console.WriteLine("leocorplibrary : Tests about LeoCorpLibrary.Core"); // Ecrire
-			Console.WriteLine("passwords : Allows you to generate multiple passwords"); // Ecrire
+			Console.ForegroundColor = ConsoleColor.Blue; // Change color
+			Console.WriteLine("+----+ Help +----+"); // Write line
+			Console.ResetColor(); // Set default color
+			Console.WriteLine("Here's all the available commands:"); // Write line
+			Console.WriteLine(""); // Write line
+			Console.WriteLine("about : Shows credits"); // Write line
+			Console.WriteLine("beep : Beep"); // Write line
+			Console.WriteLine("clear, cls : Clears the console"); // Write line
+			Console.WriteLine("exit : Closes the console"); // Write line
+			Console.WriteLine("help : Dhows help"); // Write line
+			Console.WriteLine("list : Shows commands"); // Write line
+			Console.WriteLine("logo : Show le logo"); // Write line
+			Console.WriteLine("repo : Opens the GitHub repo"); // Write line
+			Console.WriteLine("update : Checks updates"); // Write line
+			Console.WriteLine("usage : Shows how to use commands"); // Write line
+			Console.WriteLine("ver : Shows the version"); // Write line
+			Console.WriteLine("searchfile : Search throught files"); // Write line
+			Console.WriteLine("test : A test command that can be changed"); // Write line
+			Console.WriteLine("dotnet : Allows you to get the .NET version"); // Write line
+			Console.WriteLine("leocorplibrary : Tests about LeoCorpLibrary.Core"); // Write line
+			Console.WriteLine("passwords : Allows you to generate multiple passwords"); // Write line
 		}
 
 		public static void WriteCommands()
 		{
-			Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
-			Console.WriteLine("+----+ Commands +----+"); // Ecrire
-			Console.ResetColor(); // Mettre la couleur par défaut
-			Console.WriteLine("Here's the list of all the commands"); // Ecrire
-			Console.WriteLine(""); // Ecrire
+			Console.ForegroundColor = ConsoleColor.Blue; // Change color
+			Console.WriteLine("+----+ Commands +----+"); // Write line
+			Console.ResetColor(); // Set default color
+			Console.WriteLine("Here's the list of all the commands"); // Write line
+			Console.WriteLine(""); // Write line
 			for (int i = 0; i < Definitions.Commands.Length; i++)
 			{
-				Console.WriteLine(Definitions.Commands[i]); // Ecrire
+				Console.WriteLine(Definitions.Commands[i]); // Write line
 			}
 		}
 
@@ -114,11 +114,11 @@ namespace LABS_Experimental_Console.Classes
 				foreach (string file in Directory.GetFiles(path, fileName, SearchOption.AllDirectories))
 				{
 					Console.Write("Found file ");
-					Console.ForegroundColor = ConsoleColor.Blue; // Changer la couleur
-					Console.Write("> "); // Ecrire
+					Console.ForegroundColor = ConsoleColor.Blue; // Change color
+					Console.Write("> "); // Write line
 					Console.ForegroundColor = ConsoleColor.DarkYellow;
 					Console.WriteLine(file);
-					Console.ResetColor(); // Mettre la couleur par défaut
+					Console.ResetColor(); // Set default color
 				}
 			}
 			catch (Exception ex)
@@ -172,46 +172,46 @@ namespace LABS_Experimental_Console.Classes
 			switch (command)
 			{
 				case "help":
-					Console.WriteLine("Usage of 'help' : help"); // Ecrire
+					Console.WriteLine("Usage of 'help' : help"); // Write line
 					break;
 				case "ver":
-					Console.WriteLine("Usage of 'ver' : ver"); // Ecrire
+					Console.WriteLine("Usage of 'ver' : ver"); // Write line
 					break;
 				case "update":
-					Console.WriteLine("Usage of 'update' : update"); // Ecrire
+					Console.WriteLine("Usage of 'update' : update"); // Write line
 					break;
 				case "list":
-					Console.WriteLine("Usage of 'list' : list"); // Ecrire
+					Console.WriteLine("Usage of 'list' : list"); // Write line
 					break;
 				case "exit":
-					Console.WriteLine("Usage of 'exit' : exit"); // Ecrire
+					Console.WriteLine("Usage of 'exit' : exit"); // Write line
 					break;
 				case "about":
-					Console.WriteLine("Usage of 'about' : about"); // Ecrire
+					Console.WriteLine("Usage of 'about' : about"); // Write line
 					break;
 				case "clear":
-					Console.WriteLine("Usage of 'clear' : clear"); // Ecrire
+					Console.WriteLine("Usage of 'clear' : clear"); // Write line
 					break;
 				case "cls":
-					Console.WriteLine("Usage of 'cls' : cls"); // Ecrire
+					Console.WriteLine("Usage of 'cls' : cls"); // Write line
 					break;
 				case "beep":
-					Console.WriteLine("Usage of 'beep' : beep"); // Ecrire
+					Console.WriteLine("Usage of 'beep' : beep"); // Write line
 					break;
 				case "logo":
-					Console.WriteLine("Usage of 'logo' : logo"); // Ecrire
+					Console.WriteLine("Usage of 'logo' : logo"); // Write line
 					break;
 				case "repo":
-					Console.WriteLine("Usage of 'repo' : repo"); // Ecrire
+					Console.WriteLine("Usage of 'repo' : repo"); // Write line
 					break;
 				case "usage":
-					Console.WriteLine("Usage of 'usage' : usage"); // Ecrire
+					Console.WriteLine("Usage of 'usage' : usage"); // Write line
 					break;
 				case "sum":
-					Console.WriteLine("Usage of 'sum' : sum"); // Ecrire
+					Console.WriteLine("Usage of 'sum' : sum"); // Write line
 					break;
 				case "searchfile":
-					Console.WriteLine("Usage of 'searchfile' : searchfile"); // Ecrire
+					Console.WriteLine("Usage of 'searchfile' : searchfile"); // Write line
 					break;
 				case "test":
 					Console.WriteLine("Usage of 'test' : test");

@@ -29,7 +29,7 @@ namespace LABS_Experimental_Console.Classes
 {
 	public static class Definitions
 	{
-		public static readonly string Version = "1.6.1.2101"; // Version de la console
+		public static readonly string Version = "1.6.1.2101"; // Console version
 		public static readonly string[] Commands =
 		{
 			"help",
@@ -50,6 +50,6 @@ namespace LABS_Experimental_Console.Classes
 			"dotnet",
 			"leocorplibrary",
 			"passwords"
-		}; // Commandes
+		}; // Commands
 	}
 }
