@@ -53,11 +53,12 @@ namespace LABS_Experimental_Console.Classes
             Console.WriteLine("logo : Show le logo"); // Ecrire
             Console.WriteLine("repo : Opens the GitHub repo"); // Ecrire
             Console.WriteLine("update : Checks updates"); // Ecrire
-            Console.WriteLine("usage :Shows how to use commands"); // Ecrire
+            Console.WriteLine("usage : Shows how to use commands"); // Ecrire
             Console.WriteLine("ver : Shows the version"); // Ecrire
             Console.WriteLine("searchfile : Search throught files"); // Ecrire
             Console.WriteLine("test : A test command that can be changed"); // Ecrire
             Console.WriteLine("dotnet : Allows you to get the .NET version"); // Ecrire
+            Console.WriteLine("leocorplibrary : Tests about LeoCorpLibrary.Core"); // Ecrire
             Console.WriteLine("passwords : Allows you to generate multiple passwords"); // Ecrire
         }
 
