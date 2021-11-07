@@ -5,7 +5,12 @@
         "",
         "Copyright (c) Léo Corporation"
     ],
-
+    "**/*.fs": [
+        "(*",
+        "MIT License",
+        "",
+        "Copyright (c) Léo Corporation"
+    ],
     "ignore": [
         "**/*.Designer.cs",
         "LPCTestConsole/"
