@@ -32,6 +32,8 @@ let CommandExists command =
     | "about" when "about" = command -> r = false
     | "test" when "test" = command -> r = false    
     | "ver" when "ver" = command -> r = false
+    | "cls" when "cls" = command -> r = false
+    | "clear" when "clear" = command -> r = false
     | _ -> r = true
      
 
@@ -54,6 +56,8 @@ let rec ExecuteCommand command =
         elif command = "ver" then
             Console.ForegroundColor <- ConsoleColor.Blue; // Change color
             printfn $"Version {Global.Version}, Copyright {DateTime.Now.Year} - Léo Corporation" // Write line
+        elif command = "cls" || command = "clear" then
+            Console.Clear()
     else
         Console.ForegroundColor <- ConsoleColor.Red; // Set foreground color to red
         printfn "The command that you wrote doesn't exist. Type 'help' to get help." // Show message
