@@ -34,6 +34,7 @@ let CommandExists command =
     | "ver" when "ver" = command -> r = false
     | "cls" when "cls" = command -> r = false
     | "clear" when "clear" = command -> r = false
+    | "beep" when "beep" = command -> r = false
     | _ -> r = true
      
 
@@ -58,6 +59,20 @@ let rec ExecuteCommand command =
             printfn $"Version {Global.Version}, Copyright {DateTime.Now.Year} - Léo Corporation" // Write line
         elif command = "cls" || command = "clear" then
             Console.Clear()
+        elif command = "beep" then
+            if OperatingSystem.IsWindows() then
+                Console.Beep(1500, 300) // Beep
+                printfn "Beep !" // Write line
+                System.Threading.Thread.Sleep(300)
+                Console.Beep(1500, 300) // Beep
+                printfn "Beep !" // Write line
+                System.Threading.Thread.Sleep(300)
+                Console.Beep(1500, 300) // Beep
+                printfn "Beep !" // Write line
+            else
+                Console.ForegroundColor <- ConsoleColor.Red; // Set color to red
+                printfn "The beep command is only available on Windows."
+                Console.ResetColor();
     else
         Console.ForegroundColor <- ConsoleColor.Red; // Set foreground color to red
         printfn "The command that you wrote doesn't exist. Type 'help' to get help." // Show message
@@ -70,10 +85,14 @@ let rec ExecuteCommand command =
 [<EntryPoint>]
 let main argv =
     // Console setup
-    Console.Title <- "Test Console v" + Global.Version
+    Console.Title <- "LABS Experimental Console v" + Global.Version
     Console.ForegroundColor <- ConsoleColor.Blue
 
-    printfn $"Test Console v{Global.Version}, running on .NET {Environment.Version}"
+    printf "LABS Experimental Console"
+    Console.ForegroundColor <- ConsoleColor.Magenta
+    printf " (F# Edition) "
+    Console.ForegroundColor <- ConsoleColor.Blue
+    printf $"v{Global.Version}, running on .NET {Environment.Version}"
     
     // Home
     GoHome()
