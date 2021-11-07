@@ -35,6 +35,7 @@ let CommandExists command =
     | "cls" when "cls" = command -> r = false
     | "clear" when "clear" = command -> r = false
     | "beep" when "beep" = command -> r = false
+    | "logo" when "logo" = command -> r = false
     | _ -> r = true
      
 
@@ -77,6 +78,9 @@ let rec ExecuteCommand command =
                 Console.ForegroundColor <- ConsoleColor.Red; // Set color to red
                 printfn "The beep command is only available on Windows."
                 Console.ResetColor();
+        elif command = "logo" then
+            Console.ForegroundColor <- ConsoleColor.Blue;
+            Global.PrintLogo()
     else
         Console.ForegroundColor <- ConsoleColor.Red; // Set foreground color to red
         printfn "The command that you wrote doesn't exist. Type 'help' to get help." // Show message
