@@ -11,7 +11,7 @@
   <h1 align="center">LABS-ExperimentalConsole</h1>
 
   <p align="center">
-    A C# .NET 5 console application.
+    A C# and F# .NET 5 console application.
     <br />
     <a href="https://github.com/Leo-Corporation/LABS-ExperimentalConsole/releases"><strong>Download »</strong></a>
     <br />
@@ -25,8 +25,9 @@
 </p>
 
 ## Introduction
-LABS ExperimentalConsole is a console application that is dedicated to test on C#, .NET, and more.
+LABS ExperimentalConsole is a console application that is dedicated to test on C#, F#, .NET, and more.
 It has been rewritten in C# and in .NET 5.
+Currently, it's being rewritten in F# for .NET 5.
 ## Commands
 LABS Experimental Console has the following commands:
 <details>
