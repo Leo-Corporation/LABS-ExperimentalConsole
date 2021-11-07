@@ -25,9 +25,50 @@ SOFTWARE.
 open System
 
 
+let CommandExists command =
+    let mutable r = false
+
+    match command with
+    | "about" when "about" = command -> r = false
+    
+    | _ -> r = true
+     
+
+let GoHome() =
+    Console.ForegroundColor <- ConsoleColor.Yellow // Change color
+    printfn "" // Write line
+    printfn "To get started, type a command. Type 'help' to show help."  // Write line
+    Console.ForegroundColor <- ConsoleColor.Blue // Change color
+    Console.Write(">>> ") // Write line
+    Console.ResetColor() // Set default color
+
+let rec ExecuteCommand command =
+    let ex: bool = CommandExists command
+    if ex then
+        if command = "about" then
+            Console.ForegroundColor <- ConsoleColor.Blue; // Change color
+            printfn $"LABS Experimental Console © {DateTime.Now.Year} - Léo Corporation"
+        
+    else
+        Console.ForegroundColor <- ConsoleColor.Red; // Set foreground color to red
+        printfn "The command that you wrote doesn't exist. Type 'help' to get help." // Show message
+        Console.ResetColor()
+
+    GoHome()
+    let x = Console.ReadLine()
+    ExecuteCommand(x)
 
 [<EntryPoint>]
 let main argv =
+    // Console setup
+    Console.Title <- "Test Console v" + Global.Version
+    Console.ForegroundColor <- ConsoleColor.Blue
+
+    printfn $"Test Console v{Global.Version}, running on .NET {Environment.Version}"
     
-    printfn "Hello world"
+    // Home
+    GoHome()
+    let x = Console.ReadLine()
+    ExecuteCommand(x)
+
     0 // return an integer exit code
