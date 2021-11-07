@@ -30,7 +30,7 @@ let CommandExists command =
 
     match command with
     | "about" when "about" = command -> r = false
-    
+    | "test" when "test" = command -> r = false    
     | _ -> r = true
      
 
@@ -48,7 +48,8 @@ let rec ExecuteCommand command =
         if command = "about" then
             Console.ForegroundColor <- ConsoleColor.Blue; // Change color
             printfn $"LABS Experimental Console © {DateTime.Now.Year} - Léo Corporation"
-        
+        elif command = "test" then
+            printfn "This is a test command."
     else
         Console.ForegroundColor <- ConsoleColor.Red; // Set foreground color to red
         printfn "The command that you wrote doesn't exist. Type 'help' to get help." // Show message
