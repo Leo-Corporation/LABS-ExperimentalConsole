@@ -51,7 +51,11 @@ let rec ExecuteCommand command =
     if ex then
         if command = "about" then
             Console.ForegroundColor <- ConsoleColor.Blue; // Change color
-            printfn $"LABS Experimental Console © {DateTime.Now.Year} - Léo Corporation"
+            printf "LABS Experimental Console"
+            Console.ForegroundColor <- ConsoleColor.Magenta
+            printf " (F# Edition) "
+            Console.ForegroundColor <- ConsoleColor.Blue
+            printf $"© {DateTime.Now.Year} - Léo Corporation"
         elif command = "test" then
             printfn "This is a test command."
         elif command = "ver" then
@@ -85,7 +89,7 @@ let rec ExecuteCommand command =
 [<EntryPoint>]
 let main argv =
     // Console setup
-    Console.Title <- "LABS Experimental Console v" + Global.Version
+    Console.Title <- "LABS Experimental Console (F# Edition) v" + Global.Version
     Console.ForegroundColor <- ConsoleColor.Blue
 
     printf "LABS Experimental Console"
