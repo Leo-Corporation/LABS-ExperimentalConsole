@@ -37,6 +37,7 @@ let CommandExists command =
     | "beep" when "beep" = command -> r = false
     | "logo" when "logo" = command -> r = false
     | "exit" when "exit" = command -> r = false
+    | "dotnet" when "dotnet" = command -> r = false
     | _ -> r = true
      
 
@@ -84,6 +85,8 @@ let rec ExecuteCommand command =
             Global.PrintLogo()
         elif command = "exit" then
             exit(0)
+        elif command = "dotnet" then
+            printfn $".NET v{Environment.Version}"
     else
         Console.ForegroundColor <- ConsoleColor.Red; // Set foreground color to red
         printfn "The command that you wrote doesn't exist. Type 'help' to get help." // Show message
