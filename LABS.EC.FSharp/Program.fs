@@ -24,7 +24,6 @@ SOFTWARE.
 
 open System
 
-
 let CommandExists command =
     let mutable r = false
 
@@ -38,7 +37,9 @@ let CommandExists command =
     | "logo" when "logo" = command -> r = false
     | "exit" when "exit" = command -> r = false
     | "dotnet" when "dotnet" = command -> r = false
+    | "list" when "list" = command -> r = false
     | _ -> r = true
+    
      
 
 let GoHome() =
@@ -87,6 +88,10 @@ let rec ExecuteCommand command =
             exit(0)
         elif command = "dotnet" then
             printfn $".NET v{Environment.Version}"
+        elif command = "list" then
+            printfn "Available commands:\n"
+            for i = 0 to Global.Commands.Length - 1 do
+                Console.WriteLine(Global.Commands.[i])
     else
         Console.ForegroundColor <- ConsoleColor.Red; // Set foreground color to red
         printfn "The command that you wrote doesn't exist. Type 'help' to get help." // Show message

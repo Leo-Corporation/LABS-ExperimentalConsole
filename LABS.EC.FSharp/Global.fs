@@ -33,3 +33,5 @@ module Global
         printfn @"     /        \ "
         printfn @"    /          \"
         printfn @"    \__________/"
+
+    let public Commands = ["about" ; "beep" ; "cls" ; "clear" ; "dotnet" ; "exit" ; "list" ; "logo" ; "test" ; "ver"]
