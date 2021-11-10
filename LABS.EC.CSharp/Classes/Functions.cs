@@ -33,7 +33,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LABS_Experimental_Console.Classes
+namespace LABS.EC.CSharp.Classes
 {
 	public static class Functions
 	{

@@ -21,14 +21,14 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE. 
 */
-using LABS_Experimental_Console.Classes;
+using LABS.EC.CSharp.Classes;
 using LeoCorpLibrary.Core;
 using System;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace LABS_Experimental_Console
+namespace LABS.EC.CSharp
 {
 	class Program
 	{

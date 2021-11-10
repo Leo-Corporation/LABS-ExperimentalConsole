@@ -25,7 +25,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace LABS_Experimental_Console.Classes
+namespace LABS.EC.CSharp.Classes
 {
 	public static class Definitions
 	{
