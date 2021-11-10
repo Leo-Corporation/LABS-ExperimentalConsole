@@ -38,6 +38,7 @@ let CommandExists command =
     | "exit" when "exit" = command -> r = false
     | "dotnet" when "dotnet" = command -> r = false
     | "list" when "list" = command -> r = false
+    | "help" when "help" = command -> r = false
     | _ -> r = true
     
      
@@ -92,6 +93,8 @@ let rec ExecuteCommand command =
             printfn "Available commands:\n"
             for i = 0 to Global.Commands.Length - 1 do
                 Console.WriteLine(Global.Commands.[i])
+        elif command = "help" then
+            Global.PrintHelp() // Print help
     else
         Console.ForegroundColor <- ConsoleColor.Red; // Set foreground color to red
         printfn "The command that you wrote doesn't exist. Type 'help' to get help." // Show message

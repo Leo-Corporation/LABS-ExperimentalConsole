@@ -34,4 +34,27 @@ module Global
         printfn @"    /          \"
         printfn @"    \__________/"
 
-    let public Commands = ["about" ; "beep" ; "cls" ; "clear" ; "dotnet" ; "exit" ; "list" ; "logo" ; "test" ; "ver"]
+    let public Commands = ["about" ; "beep" ; "cls" ; "clear" ; "dotnet" ; "exit" ; "help" ; "list" ; "logo" ; "test" ; "ver"]
+
+    let public PrintHelp() =
+        System.Console.ForegroundColor <- System.ConsoleColor.Blue; // Change color
+        printfn "+----+ Help +----+" // Write line
+        System.Console.ResetColor(); // Set default color
+        printfn"Here's all the available commands:" // Write line
+        printfn"" // Write line
+        printfn"about : Shows credits" // Write line
+        printfn"beep : Beep" // Write line
+        printfn"clear, cls : Clears the console" // Write line
+        printfn"exit : Closes the console" // Write line
+        printfn"help : Dhows help" // Write line
+        printfn"list : Shows commands" // Write line
+        printfn"logo : Show le logo" // Write line
+        printfn"repo : Opens the GitHub repo" // Write line
+        printfn"update : Checks updates" // Write line
+        printfn"usage : Shows how to use commands" // Write line
+        printfn"ver : Shows the version" // Write line
+        printfn"searchfile : Search throught files" // Write line
+        printfn"test : A test command that can be changed" // Write line
+        printfn"dotnet : Allows you to get the .NET version" // Write line
+        printfn"leocorplibrary : Tests about LeoCorpLibrary.Core" // Write line
+        printfn"passwords : Allows you to generate multiple passwords" // Write line
