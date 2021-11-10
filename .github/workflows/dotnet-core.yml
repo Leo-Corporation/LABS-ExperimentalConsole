@@ -19,6 +19,6 @@ jobs:
     - name: Install dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build "LABS Experimental Console\LABS Experimental Console.csproj" --configuration Release --no-restore
+      run: dotnet build LPCTestConsole.sln --configuration Release --no-restore
     - name: Test
-      run: dotnet test "LABS Experimental Console\LABS Experimental Console.csproj" --no-restore --verbosity normal
+      run: dotnet test LPCTestConsole.sln --no-restore --verbosity normal
