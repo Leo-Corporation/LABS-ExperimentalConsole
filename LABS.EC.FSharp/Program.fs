@@ -92,7 +92,7 @@ let rec ExecuteCommand command =
         elif command = "list" then
             printfn "Available commands:\n"
             for i = 0 to Global.Commands.Length - 1 do
-                Console.WriteLine(Global.Commands.[i])
+                Console.WriteLine(Global.Commands[i])
         elif command = "help" then
             Global.PrintHelp() // Print help
     else
