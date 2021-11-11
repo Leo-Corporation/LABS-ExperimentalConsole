@@ -34,7 +34,7 @@ module Global
         printfn @"    /          \"
         printfn @"    \__________/"
 
-    let public Commands = ["about" ; "beep" ; "cls" ; "clear" ; "dotnet" ; "exit" ; "help" ; "list" ; "logo" ; "test" ; "ver"]
+    let public Commands = ["about" ; "beep" ; "cls" ; "clear" ; "dotnet" ; "exit" ; "help" ; "list" ; "logo" ; "repo" ; "searchfile" ; "test" ; "ver"]
 
     let public PrintHelp() =
         System.Console.ForegroundColor <- System.ConsoleColor.Blue; // Change color

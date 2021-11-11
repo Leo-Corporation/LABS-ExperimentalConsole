@@ -39,9 +39,10 @@ let CommandExists command =
     | "dotnet" when "dotnet" = command -> r = false
     | "list" when "list" = command -> r = false
     | "help" when "help" = command -> r = false
+    | "repo" when "repo" = command -> r = false
+    | "searchfile" when "searchfile" = command -> r = false
     | _ -> r = true
     
-     
 
 let GoHome() =
     Console.ForegroundColor <- ConsoleColor.Yellow // Change color
@@ -95,10 +96,16 @@ let rec ExecuteCommand command =
                 Console.WriteLine(Global.Commands[i])
         elif command = "help" then
             Global.PrintHelp() // Print help
-    else
-        Console.ForegroundColor <- ConsoleColor.Red; // Set foreground color to red
-        printfn "The command that you wrote doesn't exist. Type 'help' to get help." // Show message
-        Console.ResetColor()
+        elif command = "repo" then
+            printfn "The URL to the GitHub repo is available below:"
+            printfn ""
+            printfn "https://github.com/Leo-Corporation/LABS-ExperimentalConsole/"
+        
+        
+        else
+            Console.ForegroundColor <- ConsoleColor.Red; // Set foreground color to red
+            printfn "The command that you wrote doesn't exist. Type 'help' to get help." // Show message
+            Console.ResetColor()
 
     GoHome()
     let x = Console.ReadLine()
