@@ -101,7 +101,25 @@ let rec ExecuteCommand command =
             printfn ""
             printfn "https://github.com/Leo-Corporation/LABS-ExperimentalConsole/"
         
-        
+        elif command = "searchfile" then
+            printfn "Wich file(s) do you wanna search? (ex: file.png)"
+            Console.ForegroundColor <- ConsoleColor.Blue // Change color
+            Console.Write(">>> ") // Write line
+            Console.ResetColor() // Set default color
+            let file = Console.ReadLine()
+            Console.WriteLine("Where do you wanna search the files? (ex: C:/Users/Name/Desktop")
+            Console.ForegroundColor <- ConsoleColor.Blue // Change color
+            Console.Write(">>> ") // Write line
+            Console.ResetColor() // Set default color
+            let path = Console.ReadLine();    
+            let dirs = System.IO.Directory.GetDirectories(path)
+            for i = 0 to dirs.Length - 1 do
+                Console.Write("Found file ");
+                Console.ForegroundColor <- ConsoleColor.Blue; // Change color
+                Console.Write("> "); // Write line
+                Console.ForegroundColor <- ConsoleColor.DarkYellow;
+                Console.WriteLine(dirs[i]);
+                Console.ResetColor(); // Set default color
         else
             Console.ForegroundColor <- ConsoleColor.Red; // Set foreground color to red
             printfn "The command that you wrote doesn't exist. Type 'help' to get help." // Show message
