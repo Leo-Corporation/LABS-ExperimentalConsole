@@ -16,7 +16,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="LeoCorpLibrary.Core" Version="4.0.0.2111" />
+    <PackageReference Include="LeoCorpLibrary.Core" Version="4.1.0.2112" />
   </ItemGroup>
 
 </Project>
