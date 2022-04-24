@@ -23,6 +23,7 @@ SOFTWARE.
 */
 using LABS.EC.CSharp.Classes;
 using LeoCorpLibrary.Core;
+using LeoCorpLibrary.Core.Enums;
 using System;
 using System.Diagnostics;
 using System.Linq;
