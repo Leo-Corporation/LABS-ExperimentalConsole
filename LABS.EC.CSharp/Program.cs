@@ -195,6 +195,10 @@ namespace LABS.EC.CSharp
 						Functions.MultiplePasswords();
 						GoHome();
 						break;
+					case "ipconfig":
+						Functions.IPConfig();
+						GoHome();
+						break;
 				}
 			}
 		}

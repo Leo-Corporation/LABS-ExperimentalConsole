@@ -30,6 +30,8 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.NetworkInformation;
+using System.Net.Sockets;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -61,6 +63,7 @@ namespace LABS.EC.CSharp.Classes
 			Console.WriteLine("dotnet : Allows you to get the .NET version"); // Write line
 			Console.WriteLine("leocorplibrary : Tests about LeoCorpLibrary.Core"); // Write line
 			Console.WriteLine("passwords : Allows you to generate multiple passwords"); // Write line
+			Console.WriteLine("ipconfig : Allows you to get the IP config of this machine"); // Write line
 		}
 
 		public static void WriteCommands()
@@ -220,6 +223,32 @@ namespace LABS.EC.CSharp.Classes
 				case "dotnet":
 					Console.WriteLine("Usage of 'dotnet' : dotnet");
 					break;
+				case "ipconfig":
+					Console.WriteLine("Usage of 'ipconfig' : ipconfig");
+					break;
+			}
+		}
+		
+		public static void IPConfig()
+		{
+			try
+			{
+				var interfaces = NetworkInterface.GetAllNetworkInterfaces();
+				for (int i = 0; i < interfaces.Length; i++)
+				{
+					Console.WriteLine($"\n{i + 1}. {interfaces[i].Name}");
+					Console.WriteLine($"Status............ {interfaces[i].OperationalStatus}");
+					Console.WriteLine($"DNS Suffix........ {interfaces[i].GetIPProperties().DnsSuffix}");
+					Console.WriteLine($"IPv6 Address...... {interfaces[i].GetIPProperties().UnicastAddresses.Where(x => x.Address.AddressFamily == AddressFamily.InterNetworkV6).FirstOrDefault()?.Address}");
+					Console.WriteLine($"IPv4 Address...... {interfaces[i].GetIPProperties().UnicastAddresses.Where(x => x.Address.AddressFamily == AddressFamily.InterNetwork).FirstOrDefault()?.Address}");
+					Console.WriteLine($"IPv6 Gateway...... {interfaces[i].GetIPProperties().GatewayAddresses.Where(x => x.Address.AddressFamily == AddressFamily.InterNetworkV6).FirstOrDefault()?.Address}");
+					Console.WriteLine($"IPv4 Gateway...... {interfaces[i].GetIPProperties().GatewayAddresses.Where(x => x.Address.AddressFamily == AddressFamily.InterNetwork).FirstOrDefault()?.Address}");
+					Console.WriteLine($"IPv4 Network Mask. {interfaces[i].GetIPProperties().UnicastAddresses.Where(x => x.Address.AddressFamily == AddressFamily.InterNetwork).FirstOrDefault()?.IPv4Mask}");
+				}
+			}
+			catch
+			{
+				
 			}
 		}
 	}

@@ -49,7 +49,8 @@ namespace LABS.EC.CSharp.Classes
 			"test",
 			"dotnet",
 			"leocorplibrary",
-			"passwords"
+			"passwords",
+			"ipconfig"
 		}; // Commands
 	}
 }
