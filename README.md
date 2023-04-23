@@ -1,7 +1,7 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/Leo-Corporation/LABS-ExperimentalConsole)
 ![GitHub issues](https://img.shields.io/github/issues/Leo-Corporation/LABS-ExperimentalConsole)
 ![GitHub](https://img.shields.io/github/license/Leo-Corporation/LABS-ExperimentalConsole)
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Leo-Corporation/LABS-ExperimentalConsole/.NET%20Core) 
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/Leo-Corporation/LABS-ExperimentalConsole/dotnet-core.yml) 
 <br />
 <p align="center">
   <a href="https://github.com/Leo-Corporation/LABS-ExperimentalConsole">
