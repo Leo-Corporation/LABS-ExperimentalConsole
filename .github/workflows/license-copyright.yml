@@ -12,9 +12,9 @@ jobs:
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0
-    - uses: FantasticFiasco/action-update-license-year@v2
+    - uses: FantasticFiasco/action-update-license-year@v3
       with:
-        token: ${{ secrets.ACTIONS_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
         commitTitle: 'Updated license copyright'
         assignees: 'lpeyr'
         labels: documentation
